@@ -2,7 +2,7 @@ package com.knightsnexus.cinenexus.exception;
 
 import java.time.LocalDateTime;
 
-public class ErrorResponse {
+public class ErrorResponseDTO {
 
     private LocalDateTime timestamp;
 
@@ -14,7 +14,7 @@ public class ErrorResponse {
 
     private String path;
 
-    public ErrorResponse(LocalDateTime timestamp, int status, String error, String message, String path) {
+    public ErrorResponseDTO(LocalDateTime timestamp, int status, String error, String message, String path) {
         this.timestamp = timestamp;
         this.status = status;
         this.error = error;

@@ -1,4 +1,9 @@
 package com.knightsnexus.cinenexus.exception;
 
-public class InvalidOperationException {
+public class InvalidOperationException extends RuntimeException{
+
+    public InvalidOperationException(String message) {
+
+        super(message);
+    }
 }
