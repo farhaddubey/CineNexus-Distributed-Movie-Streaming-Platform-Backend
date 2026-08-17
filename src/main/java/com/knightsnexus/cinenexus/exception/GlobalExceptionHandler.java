@@ -39,7 +39,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ForbiddenException.class)
     public ResponseEntity<ErrorResponseDTO> handleForbidden(ForbiddenException exception, HttpServletRequest request) {
-        ErrorResponseDTO errorResponseDTO = builddErrorResponse(HttpStatus.FORBIDDEN, exception.getMessage(), request);
+        ErrorResponseDTO errorResponseDTO = buildErrorResponse(HttpStatus.FORBIDDEN, exception.getMessage(), request);
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(errorResponseDTO);
     }
 
